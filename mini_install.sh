@@ -4,7 +4,7 @@ sed '/ru_RU.UTF-8 UTF-8/s/^#//' -i /etc/locale.gen
 echo "KEYMAP=ru" >> /etc/vconsole.conf
 echo "FONT=cyr-sun16 " >> /etc/vconsole.conf
 #Установка таймзоны
-ln -s /usr/share/zoneinfo/Europe/Kiev /etc/localtime
+ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 #Имя hostname
 echo "localhost" >> /etc/hostname
 #права судо для группы wheel
