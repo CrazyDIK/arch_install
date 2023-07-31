@@ -13,7 +13,7 @@ locale-gen
 localectl set-locale ru_RU.UTF-8
 hwclock --systohc
 #root пароль и добавление пользователя
-echo 'root pass'
+# echo 'root pass'
 passwd
 read -p "Add User : " username
 useradd -m -g users -G wheel -s /bin/bash $username
@@ -28,6 +28,7 @@ sed 's/Architecture = auto/Architecture = auto \n ILoveCandy/g' -i /etc/pacman.c
 sed 's/#ParallelDownloads = 5/ParallelDownloads = 10/g' -i /etc/pacman.conf
 sed 's/#Color/Color/g' -i /etc/pacman.conf
 #основные утилиты
+pacman -Syy --noconfirm
 reflector --latest 15 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Sy --noconfirm nano wget curl git grub grub-btrfs efibootmgr dosfstools mtools ntfs-3g networkmanager openssh network-manager-applet wpa_supplicant dialog bluez bluez-utils xorg gnome gnome-shell-extensions
 #Настройк Grub загрузчика системы
