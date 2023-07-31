@@ -39,5 +39,5 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 cp /root/arch_install/in.sh /mnt/
 chmod +x /mnt/in.sh
 #переходим в новую систему и там запускаем вторую часть /in.sh
-arch-chroot /mnt sh -c /in.sh
+arch-chroot /mnt sh -c /install.sh
 
