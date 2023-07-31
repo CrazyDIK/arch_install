@@ -40,8 +40,8 @@ pacstrap /mnt base base-devel btrfs-progs intel-ucode linux-zen linux-zen-header
 #Генерация fstab
 genfstab -U -p /mnt >> /mnt/etc/fstab
 #копируем фторую часть скрипта в новую систему
-cp /root/arch_install/in.sh /mnt/
-chmod +x /mnt/in.sh
+cp ./install.sh /mnt/
+chmod +x /mnt/install.sh
 #переходим в новую систему и там запускаем вторую часть /install.sh
 arch-chroot /mnt sh -c /install.sh
 
