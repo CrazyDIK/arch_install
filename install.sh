@@ -6,7 +6,7 @@ echo "FONT=cyr-sun16 " >> /etc/vconsole.conf
 #Установка таймзоны
 ln -s /usr/share/zoneinfo/Europe/Kiev /etc/localtime
 #Имя hostname
-echo "localhost" >> /mnt/etc/hostname
+echo "localhost" >> /etc/hostname
 #права судо для группы wheel
 sed 's/# %wheel ALL=(ALL:ALL) ALL/ %wheel ALL=(ALL:ALL) ALL/g' -i /etc/sudoers
 locale-gen
@@ -66,12 +66,13 @@ pacman -Sy --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-ext
 grub-install --target=i386-pc --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 #Отключение заплаток intel
-sed 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="quiet rootfstype=btrfs mitigations=off nowatchdog"/g' -i /etc/default/grub
+#sed 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="quiet rootfstype=btrfs mitigations=off nowatchdog"/g' -i /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 #Добавление сервисов в автоpагрузку
-systemctl enable NetworkManager gdm bluetooth ananicy-cpp
+systemctl enable NetworkManager gdm ananicy-cpp
+#bluetooth
 systemctl mask NetworkManager-wait-online.service
 
 echo "Enter reboot -now"
-rm /in.sh
+rm /install.sh
 exit

@@ -8,16 +8,16 @@
 pacman -Sy git
 ```
 ```bash
-git clone https://github.com/kirumipat/arbio
+git clone https://github.com/CrazyDIK/arch_install
 ```
 ```bash
-cd arbio
+cd arch_install
 ```
 ```bash
 chmod +x arbistart_mini.sh
 ```
 ```bash
-./arbiostart_mini.sh
+./arch_installstart_mini.sh
 ```
 
 ### Install BETA
@@ -26,14 +26,14 @@ chmod +x arbistart_mini.sh
 pacman -Sy git
 ```
 ```bash
-git clone https://github.com/kirumipat/arbio
+git clone https://github.com/CrazyDIK/arch_install
 ```
 ```bash
-cd arbio
+cd arch_install
 ```
 ```bash
 chmod +x arbistart.sh
 ```
 ```bash
-./arbiostart.sh
+./arch_installstart.sh
 ```
