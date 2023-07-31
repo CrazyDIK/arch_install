@@ -14,10 +14,10 @@ git clone https://github.com/CrazyDIK/arch_install
 cd arch_install
 ```
 ```bash
-chmod +x arbistart_mini.sh
+chmod +x mini_start.sh
 ```
 ```bash
-./arch_installstart_mini.sh
+./mini_install.sh
 ```
 
 ### Install BETA
@@ -32,7 +32,7 @@ git clone https://github.com/CrazyDIK/arch_install
 cd arch_install
 ```
 ```bash
-chmod +x arbistart.sh
+chmod +x arc_install.sh
 ```
 ```bash
 ./arch_installstart.sh

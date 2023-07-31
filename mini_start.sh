@@ -43,7 +43,7 @@ pacstrap /mnt base base-devel btrfs-progs linux-zen linux-zen-headers linux-zen-
 #Генерация fstab
 genfstab -U -p /mnt >> /mnt/etc/fstab
 #копируем вторую часть скрипта в новую систему
-cp ./mini_install.sh /mnt/
+cp mini_install.sh /mnt/
 chmod +x /mnt/mini_install.sh
 #переходим в новую систему и там запускаем вторую часть /in.sh
 arch-chroot /mnt sh -c /mini_install.sh
