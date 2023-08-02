@@ -30,7 +30,8 @@ pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 pacman-key --lsign-key FBA220DFC880C036
 wget https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst
 wget https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst
-pacman -Uy --noconfirm chaotic-mirrorlist.pkg.tar.zst chaotic-keyring.pkg.tar.zst
+pacman -U --noconfirm chaotic-mirrorlist.pkg.tar.zst 
+pacman -U --noconfirm chaotic-keyring.pkg.tar.zst
 rm chaotic-mirrorlist.pkg.tar.zst
 rm chaotic-keyring.pkg.tar.zst
 echo "[chaotic-aur]" >> /etc/pacman.conf
