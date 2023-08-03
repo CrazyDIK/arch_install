@@ -63,13 +63,13 @@ pacman -Sy --noconfirm deadbeef haruna gimp ffmpegthumbs mediainfo-gui handbrake
 #Нужный софт
 pacman -Sy --noconfirm htop stacer qbittorrent-nox google-chrome xdg-user-dirs p7zip unrar neofetch kdiskmark cabextract
 #Для игр
-pacman -Sy --noconfirm mesa lib32-mesa mesa-utils lib32-mesa-utils opencl-mesa lib32-opencl-mesa vulcan-radeon lib32-vulcan-radeon gamemode steam protonup-qt gamescope
+pacman -Sy --noconfirm mesa lib32-mesa mesa-utils lib32-mesa-utils opencl-mesa lib32-opencl-mesa  vulkan-intel  lib32-vulkan-intel gamemode steam protonup-qt gamescope
 #Повышение производительности
 pacman -Sy --noconfirm ananicy-cpp ananicy-rules-git 
 # Шрифты орфография
 pacman -Sy --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-nerd-fonts-symbols hunspell
 #Настройк Grub загрузчика системы
-grub-install --target=i386-pc --recheck /dev/sda
+grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/EFI --removable 
 grub-mkconfig -o /boot/grub/grub.cfg
 #Отключение заплаток intel
 #sed 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="quiet rootfstype=btrfs mitigations=off nowatchdog"/g' -i /etc/default/grub
