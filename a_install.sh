@@ -69,7 +69,8 @@ pacman -Sy --noconfirm ananicy-cpp ananicy-rules-git
 # Шрифты орфография
 pacman -Sy --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-nerd-fonts-symbols hunspell
 #Настройк Grub загрузчика системы
-grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/EFI --removable 
+grub-install --target=i386-pc --recheck /dev/sda
+#grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/EFI --removable 
 grub-mkconfig -o /boot/grub/grub.cfg
 #Отключение заплаток intel
 #sed 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="quiet rootfstype=btrfs mitigations=off nowatchdog"/g' -i /etc/default/grub
